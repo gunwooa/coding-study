@@ -1,3 +1,5 @@
+'use strict';
+
 function solution(progresses, speeds) {
 
   var answer = [];
