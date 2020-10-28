@@ -136,14 +136,14 @@ class hashTable {
 
 
 let hashData = new hashTable(100);
-hashData.insert(1, 5);
-hashData.insert(`asd`, 12);
-hashData.insert(213, 5);
-hashData.insert(`a`, `b`);
-hashData.insert(`213`, `12`);
-console.log(hashData.search(1));
-console.log(hashData.search(213));
-// console.log(hashData.search(111)); // 없는놈
+hashData.insert(`장건우`, { address: `경기도 이천`, age: 28.9, phoneNumber: `010-4432-1991`, familyNumber: 5 });
+hashData.insert(`이희빈`, { address: `경기도 인천`, age: 26.9, phoneNumber: `010-1234-1991`, familyNumber: 15 });
+hashData.insert(`심경보`, { address: `경기도 성남`, age: 26.9, phoneNumber: `010-2468-1991`, familyNumber: 115 });
+hashData.insert(`장인범`, { address: `경기도 안양`, age: 26.9, phoneNumber: `010-1357-1991`, familyNumber: 1115 });
+console.log(hashData.search(`장건우`));
+console.log(hashData.search(`이희빈`));
+console.log(hashData.search(`심경보`));
+console.log(hashData.search(`장인범`));
 // hashData.delete(1);
 // hashData.delete(213);
 
