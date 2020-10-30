@@ -1,20 +1,8 @@
 'use strict';
 
-// 위장
-// function solution(clothes) {
-//   var answer = 0;
-
-//   return answer;
-// }
-
-// const clothes1 = [[`yellow_hat`, `headgear`], [`blue_sunglasses`, `eyewear`], [`green_turban`, `headgear`]];
-// const clothes2 = [[`crow_mask`, `face`], [`blue_sunglasses`, `face`], [`smoky_makeup`, `face`]];
-// console.log(solution(clothes1));
-
 // 📖 해시 테이블 스터디 📖
 
 // 직접 주소 테이블
-// - 해시 테이블의 아이디어는 직접 주소 테이블이라는 자료구조에서 부터 출발. 직접 주소 테이블은 입력받은 value가 곧 key가 되는 데이터 매핑 방식이다.
 class DirectAddressTable {
   constructor () {
     this.table = [];
@@ -43,9 +31,9 @@ console.log(myTable.getValue(3));
 console.log(myTable.getValue(10));
 console.log(myTable.getValue(90));
 
-console.clear();
 
 // 리얼 해시 테이블
+console.clear();
 class hashTable {
   constructor(size) {
     this.storage = [];
@@ -133,7 +121,6 @@ class hashTable {
     return false;
   }
 }
-
 
 let hashData = new hashTable(100);
 hashData.insert(`장건우`, { address: `경기도 이천`, age: 28.9, phoneNumber: `010-4432-1991`, familyNumber: 5 });
