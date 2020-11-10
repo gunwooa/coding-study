@@ -10,11 +10,6 @@ function solution(n, board) {
   
   let rows = [];
   let cols = [];
-  for (let i = 0; i <= boardSize; i++) {
-    rows.push(i);
-    cols.push(i);
-  }
-
   for (let y = 0; y < n; y++) {
     for (let x = 0; x < n; x++) {
       rows[board[y][x]] = x;
@@ -23,21 +18,21 @@ function solution(n, board) {
   }
 
   for (let target = 1; target <= boardSize; target++) {
-    const targetX = rows[target];
-    const targetY = cols[target];
+    const targetX = rows[target]; // 1
+    const targetY = cols[target]; // 2
 
-    const maxX = Math.max(targetX, nowX);
-    const minX = Math.min(targetX, nowX);
+    const maxX = Math.max(targetX, nowX); // 1
+    const minX = Math.min(targetX, nowX); // 0
 
-    const maxY = Math.max(targetY, nowY);
-    const minY = Math.min(targetY, nowY);
+    const maxY = Math.max(targetY, nowY); // 2
+    const minY = Math.min(targetY, nowY); // 0
 
-    answer += 1;
-    answer += Math.min(minX + n - maxX, maxX - minX);
-    answer += Math.min(minY + n - maxY, maxY - minY);
+    answer += 1; // 엔터값
+    answer += Math.min(minX + n - maxX, maxX - minX); // x의 실제 이동값
+    answer += Math.min(minY + n - maxY, maxY - minY); // y의 실제 이동값
 
-    nowX = targetX;
-    nowY = targetY;
+    nowX = targetX; // 1
+    nowY = targetY; // 2
   }
 
   return answer;
@@ -63,5 +58,5 @@ const board = [
   ]
 ]
 console.log(solution(n[0], board[0]));
-console.log(solution(n[1], board[1]));
-console.log(solution(n[2], board[2]));
+// console.log(solution(n[1], board[1]));
+// console.log(solution(n[2], board[2]));
